@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "path": "starters/hello-world/1.0.0",
+  "entrypoint": "package.hyperbricks",
+  "description": "Minimal HyperBricks starter with a single hello-world route.",
+  "compatible_hyperbricks": [
+    ">=0.8.0-alpha"
+  ],
+  "tags": [
+    "minimal",
+    "example"
+  ]
+}

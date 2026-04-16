@@ -1,0 +1,51 @@
+# here you can set the current module
+$module = {{MODULE_PATH}}
+
+hyperbricks {
+    mode = development
+
+    debug {
+        level = debugging
+    }
+
+    development {
+        watch = true
+        reload = true
+        frontend_errors = false
+        dashboard = false
+    }
+
+    live {
+        cache = 30s
+    }
+
+    server {
+        port = 8080
+        beautify = true
+        self_closing_tags = true
+
+        routing {
+            clean_urls = true
+            index_files = [ index.html, index.htm ]
+            extensions = [ html, htm ]
+        }
+    }
+
+    rate_limit {
+        requests_per_second = 100
+        burst = 500
+    }
+
+    plugins {
+    }
+
+    directories {
+        render = {{VAR:module}}/rendered
+        static = {{VAR:module}}/static
+        resources = {{VAR:module}}/resources
+        plugins = ./bin/plugins/
+        templates = {{VAR:module}}/templates
+        hyperbricks = {{VAR:module}}/hyperbricks
+        logs = {{VAR:module}}/logs
+    }
+}
