@@ -14,13 +14,16 @@ hyperbricks:
     level: debugging
 
   development:
-      dashboard:
-        enabled: true
-        credentials:
-          user:
-            env: HB_DEVELOPER_USER
-          password:
-            env: HB_DEVELOPER_PASSWORD
+    watch: true
+    reload: true
+    frontend_errors: false
+    dashboard:
+      enabled: true
+      credentials:
+        user:
+          env: HB_DEVELOPER_USER
+        password:
+          env: HB_DEVELOPER_PASSWORD
   live:
     cache: 30s
   server:
